@@ -37,7 +37,7 @@ AgoraRTC.getDevices()
     var selectedCameraId = videoDevices[0].deviceId;
     return Promise.all([
       AgoraRTC.createCameraVideoTrack({ cameraId: selectedCameraId }),
-      AgoraRTC.createMicrophoneVideoTrack({ microphoneId: selectedMicrophoneId }),
+      AgoraRTC.createMicrophoneAudioTrack({ microphoneId: selectedMicrophoneId }),
     ]);
   })
   .then([videoTrack, audioTrack] => {
